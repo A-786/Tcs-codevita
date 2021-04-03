@@ -1,0 +1,10 @@
+t=int(input())
+for T in range(t):
+    r,n=map(int,input().split())
+    ans=0
+    maxi = (n//r + (n%r!=0))
+    last= n//r
+    ans = maxi * (r-1) * last + 1 
+    if (last!=1):
+        ans+=(maxi *(maxi-1))//last
+    print(ans)
