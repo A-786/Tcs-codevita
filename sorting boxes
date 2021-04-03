@@ -1,0 +1,4 @@
+size,k = map(int,input().split())
+parcel = list(map(int,input().split()))
+effort = 2*parcel[k-1]*min(parcel) + max(parcel)*min(parcel)
+print(effort)
