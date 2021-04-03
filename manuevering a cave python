@@ -1,0 +1,14 @@
+def calculate(a, b):
+    if a == 1 or b == 1:
+        return 1
+    else:
+        return calculate(a - 1, b) + calculate(a, b - 1)
+result = []    
+test = int(input())
+
+for i in range(test):
+    a, b = map(int,input().split())
+    result.append(calculate(a, b))
+    
+for i in result:
+    print(i,end=" ")
